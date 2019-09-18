@@ -26,7 +26,7 @@
 //
 ///////////////////////////////////////////////////////////////////////
 #if !defined(ws2812_resettime)
-#define ws2812_resettime    300
+#define ws2812_resettime    50
 #endif
 
 ///////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@
 #endif
 
 #if !defined(ws2812_pin)
-#define ws2812_pin  2   // Data out pin
+#define ws2812_pin  0   // Data out pin
 #endif
 
 /*

@@ -12,6 +12,8 @@
 # options for possible values)
 MCU=attiny85
 
+F_CPU=16000000UL
+
 # id to use with programmer
 # default: PROGRAMMER_MCU=$(MCU)
 # In case the programer used, e.g avrdude, doesn't
@@ -90,7 +92,7 @@ CFLAGS=-I. $(INC) -g -mmcu=$(MCU) -O$(OPTLEVEL) \
 	-fpack-struct -fshort-enums             \
 	-funsigned-bitfields -funsigned-char    \
 	-Wall -Wstrict-prototypes               \
-	-DF_CPU=8000000UL						\
+	-DF_CPU=$(F_CPU)						\
 	-Wa,-ahlms=$(firstword                  \
 	$(filter %.lst, $(<:.c=.lst)))
 
